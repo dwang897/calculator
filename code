@@ -1,0 +1,184 @@
+var firstNumber = "";
+var secondNumber = "";
+var secondInput = false;
+var operation = "";
+//var displayText = "";
+
+//1
+onEvent("numberOne", "click", function(event){
+  console.log("numberOne clicked");
+  if(secondInput == false) {
+    firstNumber = firstNumber + "1";
+    setText("displayLabel", firstNumber);
+  } else {
+    secondNumber = secondNumber + "1";
+    setText("displayLabel", firstNumber + operation + secondNumber);
+  }
+});
+
+//2
+onEvent("numberTwo", "click", function(event){
+  console.log("numberTwo clicked");
+  if(secondInput == false) {
+    firstNumber = firstNumber + "2";
+    setText("displayLabel", firstNumber);
+  } else {
+    secondNumber = secondNumber + "2";
+    setText("displayLabel", firstNumber + operation + secondNumber);
+  }
+});
+
+//3
+onEvent("numberThree", "click", function(event){
+  console.log("numberThree clicked");
+  if(secondInput == false) {
+    firstNumber = firstNumber + "3";
+    setText("displayLabel", firstNumber);
+  } else {
+    secondNumber = secondNumber + "3";
+    setText("displayLabel", firstNumber + operation + secondNumber);
+  }
+});
+
+//4
+onEvent("numberFour", "click", function(event){
+  console.log("numberFour clicked");
+  if(secondInput == false) {
+    firstNumber = firstNumber + "4";
+    setText("displayLabel", firstNumber);
+  } else {
+    secondNumber = secondNumber + "4";
+    setText("displayLabel", firstNumber + operation + secondNumber);
+  }
+});
+
+//5
+onEvent("numberFive", "click", function(event){
+  console.log("numberFive clicked");
+  if(secondInput == false) {
+    firstNumber = firstNumber + "5";
+    setText("displayLabel", firstNumber);
+  } else {
+    secondNumber = secondNumber + "5";
+    setText("displayLabel", firstNumber + operation + secondNumber);
+  }
+});
+
+//6
+onEvent("numberSix", "click", function(event){
+  console.log("numberSix clicked");
+  if(secondInput == false) {
+    firstNumber = firstNumber + "6";
+    setText("displayLabel", firstNumber);
+  } else {
+    secondNumber = secondNumber + "6";
+    setText("displayLabel", firstNumber + operation + secondNumber);
+  }
+});
+
+//7
+onEvent("numberSeven", "click", function(event){
+  console.log("numberSeven clicked");
+  if(secondInput == false) {
+    firstNumber = firstNumber + "7";
+    setText("displayLabel", firstNumber);
+  } else {
+    secondNumber = secondNumber + "7";
+    setText("displayLabel", firstNumber + operation + secondNumber);
+  }
+});
+
+//8
+onEvent("numberEight", "click", function(event){
+  console.log("numberEight clicked");
+  if(secondInput == false) {
+    firstNumber = firstNumber + "8";
+    setText("displayLabel", firstNumber);
+  } else {
+    secondNumber = secondNumber + "8";
+    setText("displayLabel", firstNumber + operation + secondNumber);
+  }
+});
+
+//9
+onEvent("numberNine", "click", function(event){
+  console.log("numberNine clicked");
+  if(secondInput == false) {
+    firstNumber = firstNumber + "9";
+    setText("displayLabel", firstNumber);
+  } else {
+    secondNumber = secondNumber + "9";
+    setText("displayLabel", firstNumber + operation + secondNumber);
+  }
+});
+
+//0
+onEvent("numberZero", "click", function(event){
+  console.log("numberZero clicked");
+  if(secondInput == false) {
+    firstNumber = firstNumber + "0";
+    setText("displayLabel", firstNumber);
+  } else {
+    secondNumber = secondNumber + "06";
+    setText("displayLabel", firstNumber + operation + secondNumber);
+  }
+});
+
+//addition
+onEvent("additionButton", "click", function(event){
+  console.log("additionButton clicked");
+  operation = " + ";
+  secondInput = true;
+  setText("displayLabel", firstNumber + operation);
+});
+//subtraction
+onEvent("subtractionButton", "click", function(event){
+  console.log("subtractionButton clicked");
+  operation = " - ";
+  secondInput = true;
+  setText("displayLabel", firstNumber + operation);
+});
+//multiplication
+onEvent("multiplicationButton", "click", function(event){
+  console.log("multiplicationButton clicked");
+  operation = " * ";
+  secondInput = true;
+  setText("displayLabel", firstNumber + operation);
+});
+//division
+onEvent("divisionButton", "click", function(event){
+  console.log("divisionButton clicked");
+  operation = " / ";
+  secondInput = true;
+  setText("displayLabel", firstNumber + operation);
+});
+//calculate
+onEvent("equalButton", "click", function(event){
+  console.log("equalButton clicked");
+  var numberFirst = parseInt(firstNumber);
+  var numberSecond = parseInt(secondNumber);
+  if (operation == " + ") {
+    setText("displayLabel", numberFirst + numberSecond);
+  } else if (operation == " - ") {
+    setText("displayLabel", numberFirst - numberSecond);
+  } else if (operation == " * ") {
+    setText("displayLabel", numberFirst * numberSecond);
+  } else if (operation == " / ") {
+    setText("displayLabel", numberFirst / numberSecond);
+  }
+  operation = "";
+  secondInput = false;
+  firstNumber = "";
+  secondNumber = "";
+});
+//clearCalculator
+onEvent("clearButton", "click", function(event){
+  displayLabel = "";
+  setText("displayLabel", "");
+  firstNumber = "";
+  secondNumber = "";
+  operation = "";
+  secondInput = false;
+  numberFirst = "";
+  numberSecond = "";
+});
